@@ -40,7 +40,7 @@ module Trueskill
       - ::Math.sqrt(2) * ierfcc(2*x)
     end
 
-    def Math.gaussian(x, mu, sigma)
+    def Math.gaussian(x, mu=0, sigma=1)
       1.0 / (::Math.sqrt(2*::Math::PI)*::Math.sqrt(sigma))\
       * ::Math.exp(- 1.0 / (2.0*sigma) * (x - mu)**2)
     end
