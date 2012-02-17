@@ -1,4 +1,4 @@
-module TrueSkill
+module Trueskill
   module Math
     # Complimentary error function
     def Math.erfcc(x)
@@ -38,6 +38,11 @@ module TrueSkill
     # Inverse cdf
     def Math.ppf(x)
       - ::Math.sqrt(2) * ierfcc(2*x)
+    end
+
+    def Math.gaussian(x, mu, sigma)
+      1.0 / (::Math.sqrt(2*::Math::PI)*::Math.sqrt(sigma))\
+      * ::Math.exp(- 1.0 / (2.0*sigma) * (x - mu)**2)
     end
   end
 end
