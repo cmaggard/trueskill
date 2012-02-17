@@ -3,7 +3,6 @@ module Trueskill
     attr_accessor :mu, :sigma, :id
 
     def initialize(params = {})
-      raise ArgumentError unless params[:id]
       @id = params[:id]
       @mu = params[:mu] 
       @sigma = params[:sigma]

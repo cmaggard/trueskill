@@ -32,11 +32,6 @@ describe "Trueskill::Player" do
     it "should take the id at init" do
       player.id.should == "Al"
     end
-    it "should require an id" do
-      lambda {
-        player = Trueskill::Player.new
-      }.should raise_error(ArgumentError)
-    end
     it "should let you change the id" do
       player.id = "Alan"
       player.id.should == "Alan"
