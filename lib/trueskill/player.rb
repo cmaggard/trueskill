@@ -9,7 +9,7 @@ module Trueskill
     end
 
     def pi
-      1.0 / @sigma
+      1.0 / (@sigma ** 2)
     end
 
     def tau
